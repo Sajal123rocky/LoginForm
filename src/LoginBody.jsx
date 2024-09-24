@@ -12,6 +12,20 @@ const LoginBody = () => {
         e.preventDefault();
         const findusername=userList.find(u=>u.username===formValues.username);
         const findpassword=userList.find(u=>u.password===formValues.password);
+        // for(let i=0;i<userList.length;i++){
+        //     if(userList[i].username===formValues.username&&userList[i].password===formValues.password){
+        //         setSuccess(true);
+        //         navigate('/userDisplay');
+        //     }
+        //     else if(userList[i].username===formValues.username&&userList[i].password!==formValues.password){
+        //         setError({message:"Invalid password"});
+        //         break;
+        //     }
+        //     else if(userList[i].username!==formValues.username&&userList[i].password===formValues.password){
+        //         setError({message:"Username does not exist"});
+        //         break;
+        //     }
+        // }
         if(findusername&&findpassword){
             if(findusername.role==="admin"){
                 setSuccess(true);
